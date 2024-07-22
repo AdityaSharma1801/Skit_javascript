@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lavender;
+            border: 5px solid black;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is my heading tag</h1>
+
+
+
+
+    <script>
+
+        //    console.log("Hello JavaScript")
+        //    alert("Hello everyone")
+        //    document.write("Today is Monday")
+
+        // a="aditya"
+        // console.log(typeof a)
+        // console.log(a)
+
+
+        /*DATA TYPES
+        
+        number  
+        string  
+        boolean  
+        object(array)  
+        undefined  
+        null  
+        symbol 
+        
+    
+    
+        3 KEYWORDS
+         VAR                                       redeclarartion and reassign possible
+         LET       introduced by ES6  (2015)       redeclarartion not possible , but we can reassign [scope dependent]
+         CONST                   ES6               both not possible
+        */
+
+        // var x = 10;
+        // var x = 50;
+        // x=100;
+        // console.log(x)
+
+
+        // let b = 20;
+        // //let b = 50;    not possible
+        //  b = 50;
+        // console.log(b)
+
+        // const c = 30;
+        // console.log(c)
+        //redeclarartion and reassign both are not possible
+
+
+
+        // {
+        //     let a = 10;   // acsess only available in local scope unlike var(it is global)
+        // }
+        //     console.log(a)
+
+        // {
+        //     var a =30;
+        // }
+        // console.log(a)
+
+        // var i =10;
+        // for(var i=0;i<5;i++){
+
+        // }
+        // console.log(i)   //overriden value we can solve this by using Let
+
+
+        // let i =10;
+        // for(let i=0;i<5;i++){
+
+        // }
+
+        // console.log(i) 
+
+        // output()
+        // function output(){
+        //     console.log("hello js")
+        // }
+
+        // console.log(a=20)
+        //  let a ;      // let and const is not a kosting variable
+
+        //  console.log(a=20)
+        //  var a ;        // -------var is a hosting variable
+
+
+
+        // console.log(10<5)
+        // console.log(5<=5)
+        // console.log('A'>'B')
+        // console.log('a'<'b')
+        // console.log('5'==5)     //only value compare   (==)
+        // console.log('5'===5)    //both data type and value compare  (===)
+        // console.log('7'!=7)
+        // console.log('7'!==7)
+        // console.log(5!=5)
+        // console.log(3**2)     //exponent
+
+
+        // let age = 18;
+        // if(age>=){
+        //     console.log("you can vote")
+        // }
+        // else if(age>=10 && age,18)
+        // {
+        //     console.log("half vote")
+        // }
+        // else{
+        //     console.log("unable to vote")
+        // }
+
+
+
+
+        // let a = 5;
+        // let b = 6;
+        // let c = 2;
+        // let d = 9;
+
+        // let max = a;
+
+        // if (b > max) {
+        //     max = b;
+        // }
+
+        // if (c > max) {
+        //     max = c;
+        // }
+
+        // if (d > max) {
+        //     max = d;
+        // }
+
+        // console.log("The maximum value is: " + max);
+
+
+        // do{
+        //     console.log("hello")
+        // }while(x==5);
+
+        // let y = 0;
+        // while(false){
+        //     console.log(y)
+        //     y++
+        // }
+
+        // for(let z = 0; z<5 ;z++){
+        //     console.log(z)
+        // }
+
+
+
+        //FUNCTIONS
+
+        // function output(a,b)    //parameter
+        // {
+        //     console.log(a+b)
+        // }
+        // output(10,20)           // arguments
+
+
+        // function output(a,b=100){
+        //     return a+b
+        //     console.log(a+b)     //function ko return mil gya 
+        // }
+        // // console.log (output(10,20))  
+        // let ans = output(10);
+        // console.log(ans)        
+
+
+
+
+        //TYPES OF FUNCTIONS IN JS
+        // 1. naming Function       ------IIFE (immediatly invoke function expression)
+        // 2. anyonomous function
+        // 3. arrow function
+  
+
+                    //nameing function
+
+        // (function(a,b){
+        //     console.log("Hello JS",a+b)
+        // }) (10,20)
+
+
+        // (function(a,b){
+        //     console.log(`Hello JS ${a+b}`)      //correct way
+        // }) (10,20)
+
+        // (function(a,b){
+        //     console.log(`Hello JS ${a-b}`)      
+        // }) (10,20)
+
+
+
+                        //Anonymous Func
+        // let f1 = function(a,b){             // function expression; when we store function in a variable
+
+        //     console.log(a+b);
+        // };
+
+        // let f2 = function(a,b){            
+
+        //     console.log(a-b);
+        // };
+
+        // f1(10,20);
+        // f2(20,10);
+
+
+        // (function (a, b) {
+
+        //     console.log(a + b)
+        // })(10, 20)
+
+        //     (function (a, b) {
+
+        //         console.log(a + b)
+        //     })(10, 20)
+
+
+    //    (()=>{
+    //         console.log("Hello")
+    //     }) ()
+
+                    //Arrow Function
+            // let f1=(a,b)=>{
+            //     return a+b
+            // }
+            // console.log(f1(10,20))
+
+            // let f1=(a,b)=>a+b
+            // console.log(f1(10,20)) 
+
+
+        // function outer(){
+
+        //     let a = 10;
+        //     let b = 20;
+
+        //      function inner(){
+
+        //         console.log(a+b)
+
+        //     }
+
+        //      return inner;
+        // }
+
+        // let ans = outer();
+        // ans()                         //returned with laxical scoping (surrounding environment)
+
+
+
+                            //Call back function -----accepts othre function as a argument
+
+        // function f1 (a){
+        //     // console.log(a)
+        //     a()
+        // }
+
+        // function f2(){
+        //     console.log("I am F2 function")
+        // }
+
+        // f1(f2)
+
+        // function output(x,y,z){
+        //     z(x,y)
+
+        // }
+        // function add(a,b){
+        //     console.log(a+b)
+        // }
+        // output(30,50,add)
+
+
+        function Output(f1){
+            f1()    //console.log(f1())
+        }
+
+        Output(function(){
+            console.log("Hey JS")
+        })
+
+    </script>
+</body>
+
+</html>
