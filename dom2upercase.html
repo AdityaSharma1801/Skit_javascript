@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20vh;
+            
+        }
+        .box{
+            border: 2px solid black;
+            width: 40%;
+            justify-content: center;
+            align-items: center;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="mybox">
+            <p id="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci autem minima quos quia excepturi eos assumenda ipsum quas. Assumenda quibusdam molestias modi iste laudantium voluptate maxime facere excepturi quasi beatae <br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate autem repellendus voluptatum delectus eum ducimus error optio aliquam? Ratione mollitia, placeat aspernatur recusandae enim itaque explicabo aut consectetur quasi necessitatibus!
+            </p>
+            <button id="uppercase" >uppercase</button>
+            <button id="lowercase">lowercase</button>
+            <button id="increase">+</button>
+            <button id="decrease">-</button>
+            <input type="color" id="color">
+            <input type="range" id="range">
+    </div>
+   
+    <script>
+        let counter1 = 16;
+        let counter2 = 16;
+        document.getElementById("uppercase").onclick = function(){
+            document.getElementById("text").style.textTransform = "uppercase";
+        }
+        document.getElementById("lowercase").onclick = function(){
+            document.getElementById("text").style.textTransform = "lowercase";
+        }
+        document.getElementById("increase").onclick = function(){
+            counter1++;
+            document.getElementById("text").style.fontSize=counter1+"px";
+        }
+        document.getElementById("decrease").onclick = function(){
+            counter2--;
+            document.getElementById("text").style.fontSize= counter2+"px";
+        }
+        document.getElementById("color").oninput = function(){
+            let color = document.getElementById("color").value;
+            console.log(color)
+            document.getElementById("mybox").style.backgroundColor=color;
+        }
+        document.getElementById("range").oninput=function(){
+            let size=document.getElementById("range").value;
+            console.log(size)
+            document.getElementById("text").style.fontSize=size+"px"
+        }
+    </script>
+</body>
+</html>
