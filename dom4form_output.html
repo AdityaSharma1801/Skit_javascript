@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .input{
+        margin: auto;
+        padding: 40px;
+        box-shadow: 0ox 0ox 10px red;
+        width: 45%;
+        border: 2px solid gray;
+    }
+    input{
+        width: 45%;
+        padding: 10px 8px;
+        border: 2px solid black;
+        margin-bottom: 5px ;
+    }
+    input:nth-child(2){
+        background-color: chartreuse;
+        border: 2px solid violet;
+    }
+    input:nth-child(3){
+        background-color: chartreuse;
+        border: 2px solid violet;
+    }
+    input:nth-child(6){
+        background-color: chartreuse;
+        border: 2px solid violet;
+    }
+    button{
+            padding: 10px 20px;
+            width: 96%;
+    }
+</style>
+<body>
+    <div class="input">
+        <input type="text" class="inp" id="inp0" placeholder="Name"/>
+        <input type="text" class="inp" id="inp1"placeholder="email"/>
+        <input type="text" class="inp" id="inp2"placeholder="Age"/>
+        <input type="text" class="inp" id="inp3"placeholder="Mobile No."/>
+        <input type="text" class="inp" id="inp4"placeholder="City"/>
+        <input type="text" class="inp" id="inp5"placeholder="Pin code"/>
+
+           <button id="btn">Submit</button>
+    </div>
+
+   <script>
+        document.getElementById("btn").onclick = function(){
+
+            let val = document.getElementsByClassName("inp");
+            console.log(val)
+            // for(let i=0; i<val.length; i++){
+            //      console.log(val[i].value)     
+            // }
+            for (let i of val){
+                console.log(i.value)
+            }
+        }
+
+        // document.querySelector("button").onclick = function(){
+        //     console.log("hello js")
+        // }
+
+        // document.querySelector("button").onclick = function(){
+        //     let a = document.querySelectorAll("input");
+        // for(let i in a){
+        //     console.log(i.value)
+        //     }
+        // }
+        
+    </script>
+</body>
+</html>
