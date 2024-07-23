@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #textarea{
+            padding: 20px;
+            height: 300px;
+            width: 30%;
+            border: 3px solid black;
+        }
+        #copy{
+            height: 40vh;
+            width: 60%;
+            border: 3px solid black;
+            margin-top: 5vh;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    <textarea name="" id="textarea"></textarea>
+    <input type="color">
+    <div id="copy">
+
+    </div>
+
+    <script>
+       document.getElementById("textarea").oninput=function(){
+        let text=document.getElementById("textarea").value;
+        document.getElementById("copy").innerHTML=`<h1>${text}</h1>`
+       }
+    </script>
+</body>
+</html>
