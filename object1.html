@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        
+        // let obj = [
+        // {
+        //     rollno:1001,
+        //     name:"aditya",
+        //     email:"adi@gmail.com",
+        //     age:10,
+        //     city:"Jaipur"
+        // },
+        // {
+        //     rollno:1002,
+        //     name:"aditya",
+        //     email:"adi@gmail.com",
+        //     age:30,
+        //     city:"Jaipur"
+        // },
+        // {
+        //     rollno:1003,
+        //     name:"aditya",
+        //     email:"adi@gmail.com",
+        //     age:19,
+        //     city:"Jaipur"
+        // },
+        // {
+        //     rollno:1004,
+        //     name:"aditya",
+        //     email:"adi@gmail.com",
+        //     age:27,
+        //     city:"Jaipur"
+        // },
+        // {
+        //     rollno:1005,
+        //     name:"aditya",
+        //     email:"adi@gmail.com",
+        //     age:21,
+        //     city:"Jaipur"
+        // },
+        // {
+        //     rollno:1006,
+        //     name:"aditya",
+        //     email:"adi@gmail.com",
+        //     age:21,
+        //     city:"Jaipur"
+        // },
+        // {
+        //     rollno:1007,
+        //     name:"aditya",
+        //     email:"adi@gmail.com",
+        //     age:20,
+        //     city:"Jaipur"
+        // },
+        // {
+        //     rollno:1008,
+        //     name:"aditya",
+        //     email:"adi@gmail.com",
+        //     age:16,
+        //     city:"Jaipur"
+        // },
+        // {
+        //     rollno:1009,
+        //     name:"aditya",
+        //     email:"adi@gmail.com",
+        //     age:39,
+        //     city:"Jaipur"
+        // }
+        // ]
+        // let b = obj.filter((item)=>{
+        //  return item.age > 18
+        // })
+        // console.log(b)
+
+    
+        // console.log(obj)
+        // console.log(obj.name, obj.age, obj.city)
+        // console.log(obj["name"] )
+
+        // for(let i in obj){
+        //     console.log(i,obj[i])
+        // }
+
+
+
+        let obj = {
+
+             rollno:1001,
+             fname:"aditya",
+             lname:"sharma",
+             email:"adi@gmail.com",
+             age:10,
+             city:"Jaipur",
+             skills:["C","C++","Js","Mongo"],
+             fullname:function(){
+                console.log(this.fname, this.lname)
+                console.log(this)
+             },
+             marks:{
+                "p":85,
+                "c":40,
+                "m":90
+             }
+             };
+             console.log(obj.marks["m"])
+             console.log(obj.fullname())
+             console.log(obj)
+
+    </script>
+</body>
+</html>
