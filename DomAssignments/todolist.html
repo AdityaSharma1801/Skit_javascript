@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        margin-left: 20px;
+
+    }
+    .container
+    {
+        width: 800px;
+        background-color: grey;
+        margin-top: 40px;
+        border-radius: 10px;
+    }
+    button{
+        margin:10px;
+    }
+</style>
+</head>
+<body>
+    <h1>Enter tasks</h1>
+    <div class="container">
+        <input type="text">
+        <button>OK</button>
+    </div>
+    <script>
+        document.querySelector("button").onclick=function()
+        {
+            let val = document.querySelector("input").value;
+            document.querySelector("input").value='';
+            document.querySelector("input").focus();
+            let h = document.createElement("li");
+            let b=document.createElement("button")
+            let c=document.createElement("button")
+            h.innerHTML=val;
+            c.innerHTML="Done Task"
+            b.innerHTML="Delete the task"
+            document.querySelector(".container").append(h);
+            document.querySelector(".container").append(c);
+            document.querySelector(".container").append(b);
+            c.onclick = function() {
+                h.style.textDecoration = "line-through";
+            };
+            b.onclick = function() {
+                h.remove();
+                c.remove();
+                b.remove();
+            };
+        };
+    </script>
+</body>
+</html>

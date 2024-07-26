@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Circles</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .color-circle {
+            position: absolute;
+            width: 140px; 
+            height: 140px; 
+            border-radius:35%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const circles = {};
+        const circleSize = 150;
+        const margin = 10;
+        const adjustedSize = circleSize - margin;
+
+        document.addEventListener('mousemove', (e) => {
+            const x = Math.floor(e.clientX / circleSize) * circleSize;
+            const y = Math.floor(e.clientY / circleSize) * circleSize;
+            const key = `${x}-${y}`;
+
+            if (circles[key]) {
+                // Update the color of the existing circle
+                circles[key].style.backgroundColor = getRandomColor();
+            } else {
+                // Create a new circle
+                const circle = document.createElement('div');
+                circle.className = 'color-circle';
+                circle.style.left = `${x + margin / 2}px`;
+                circle.style.top = `${y + margin / 2}px`;
+                circle.style.backgroundColor = getRandomColor();
+                document.body.appendChild(circle);
+                circles[key] = circle;
+            }
+        });
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
