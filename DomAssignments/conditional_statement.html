@@ -66,7 +66,12 @@
         <div class="color" id="yellow"></div>
         <div class="color" id="green"></div>
         <div class="color" id="black"></div>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut labore consectetur deleniti natus, maiores rerum libero necessitatibus suscipit hic. Atque accusantium dolorem dolor corrupti error consectetur accusamus delectus aspernatur molestias!</p>
+        <p>This text for Angular</p>
+
+        <button id="Up">Uppercase</button>
+        <button id="low">Lowercase</button>
+        <Button id="Increase">Increase</Button>
+        <button id="decrease">Decrease</button>
     </div>
 
     <script>
@@ -88,17 +93,36 @@
             console.log(select);
            
             if (select === "1") {
-                console.log("Hi this is selection 1");
+                document.querySelector("p").innerText="This Text is For angular"
             } else if (select === "2") {
-                console.log("Hi this is selection 2");
+                document.querySelector("p").innerText="This Text is For React"
             } else if (select === "3") {
-                console.log("Hi this is selection 3");
+                document.querySelector("p").innerText="This Text is For Mongo"
             } else if (select === "4") {
-                console.log("Hi this is selection 4");
+                document.querySelector("p").innerText="This Text is For AWS"
             } else if (select === "5") {
-                console.log("Hi this is selection 5");
+                document.querySelector("p").innerText="This Text is For Bootstrap"
             }
         }
+        let x = 16;
+        
+
+        document.getElementById("Up").onclick= function(){
+            document.querySelector("p").style.textTransform="uppercase"
+        }
+
+        document.getElementById("low").onclick= function(){
+            document.querySelector("p").style.textTransform="lowercase"
+        }
+        document.getElementById("Increase").onclick= function(){
+           
+            x++;
+            document.querySelector("p").style.fontSize= x +"px"        }
+
+            document.getElementById("decrease").onclick= function(){
+           
+           y--;
+           document.querySelector("p").style.fontSize= x +"px"        }
     </script>
 </body>
 </html>
