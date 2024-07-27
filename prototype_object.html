@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+                                                        //PROTOTYPE OBJECT---also a object taking reference from other functions
+        // let obj = {
+        
+        //     name:function(){
+        //         console.log("Hello")
+        //     }
+        // }
+        // obj.name()
+
+
+
+    //     let obj = {
+        
+    //     output(){
+    //         console.log("Hello")
+    //     },
+
+    //     abc(){
+    //         console.log("Hello i am abc function ")
+    //     }
+    // }
+    // console.log(obj)
+
+    // output()
+    // abc()
+
+    // console.log(obj.toString())                            //this toString object is made in prototype object
+
+
+
+
+    // let a=[1,2,3,4,5,6,7,8]
+
+    // console.log(a)
+
+    // let b='aditya'
+    // console.log(b)
+
+
+    let obj1={
+
+        output(){
+            console.log("I am output function")
+        }
+    };
+
+    let obj2={
+
+        show(){
+            console.log("I am show function")
+        }
+    };
+
+
+    obj1.__proto__=obj2;      //making function of obj2 as prototype objects of obj1......AKA prototype chaining
+
+    console.log(obj1)
+
+    obj1.show()
+    
+
+
+    </script>
+</body>
+</html>
